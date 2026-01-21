@@ -1,38 +1,35 @@
 spring:
   application:
-    name: inventory-service
+    name: inventory-service-test
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventory_db
-    username: postgres
-    password: xoxymesddd
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:13:///testdb
+    username: test
+    password: test
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
 
-    liquibase:
-      change-log: classpath:db/changelog/db.changelog-master.yaml
-      enabled: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
 
-# gRPC configuration
 grpc:
   server:
-    port: 9090
+    port: 0  # Random port for tests
     enable-keep-alive: true
 
 server:
-  port: 8082
+  port: 0  # Random port for tests
 
 logging:
   level:
     org.example.inventoryservice: DEBUG
-    org.springframework.web: INFO
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.testcontainers: INFO
+    org.springframework.test: DEBUG

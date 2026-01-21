@@ -1,0 +1,217 @@
+Initialized native services in: C:\Users\azate\.gradle\native
+Initialized jansi services in: C:\Users\azate\.gradle\native
+Found daemon DaemonInfo{pid=35180, address=[10eec308-f651-4bb3-8d6c-3633f06cb7f8 port:60488, addresses:[/127.0.0.1]], state=Idle, lastBusy=1768938375520, context=DefaultDaemonContext[uid=5b5fed57-79a2-4f59-854e-f69dbb645357,javaHome=C:\Program Files\Java\jdk-17,javaVersion=17,javaVendor=Oracle Corporation,daemonRegistryDir=C:\Users\azate\.gradle\daemon,pid=35180,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-24 (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=RU, -Duser.language=ru, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=5b5fed57-79a2-4f59-854e-f69dbb645357,javaHome=C:\Program Files\Java\jdk-17,javaVersion=17,javaVendor=Oracle Corporation,daemonRegistryDir=C:\Users\azate\.gradle\daemon,pid=35180,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 15272). The daemon log file: C:\Users\azate\.gradle\daemon\9.2.1\daemon-15272.out.log
+Starting 3rd build in daemon [uptime: 1 mins 39.855 secs, performance: 100%, GC rate: 0.00/s, heap usage: 2% of 512 MiB, non-heap usage: 20% of 384 MiB]
+Using 12 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=false, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=false, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Now considering [C:\Users\azate\IdeaProjects\String\microservice-apps] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\azate\IdeaProjects\String\microservice-apps\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\azate\IdeaProjects\String\microservice-apps\build.gradle'.
+Included projects: [root project 'microservice-apps', project ':InventoryService']
+
+> Configure project :
+Evaluating root project 'microservice-apps' using build file 'C:\Users\azate\IdeaProjects\String\microservice-apps\build.gradle'.
+
+> Configure project :InventoryService
+Evaluating project ':InventoryService' using build file 'C:\Users\azate\IdeaProjects\String\microservice-apps\InventoryService\build.gradle'.
+Resolved plugin [id: 'java']
+Resolved plugin [id: 'org.springframework.boot', version: '4.0.1']
+Resolved plugin [id: 'io.spring.dependency-management', version: '1.1.7']
+Resolved plugin [id: 'com.google.protobuf', version: '0.9.4']
+Applying dependency management to configuration 'annotationProcessor' in project 'InventoryService'
+Applying dependency management to configuration 'apiElements' in project 'InventoryService'
+Applying dependency management to configuration 'archives' in project 'InventoryService'
+Applying dependency management to configuration 'bootArchives' in project 'InventoryService'
+Applying dependency management to configuration 'compileClasspath' in project 'InventoryService'
+Applying dependency management to configuration 'compileOnly' in project 'InventoryService'
+Applying dependency management to configuration 'default' in project 'InventoryService'
+Applying dependency management to configuration 'developmentOnly' in project 'InventoryService'
+Applying dependency management to configuration 'implementation' in project 'InventoryService'
+Applying dependency management to configuration 'mainSourceElements' in project 'InventoryService'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'InventoryService'
+Applying dependency management to configuration 'runtimeClasspath' in project 'InventoryService'
+Applying dependency management to configuration 'runtimeElements' in project 'InventoryService'
+Applying dependency management to configuration 'runtimeOnly' in project 'InventoryService'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'InventoryService'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'InventoryService'
+Applying dependency management to configuration 'testCompileClasspath' in project 'InventoryService'
+Applying dependency management to configuration 'testCompileOnly' in project 'InventoryService'
+Applying dependency management to configuration 'testImplementation' in project 'InventoryService'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'InventoryService'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'InventoryService'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'InventoryService'
+Applying dependency management to configuration 'protobuf' in project 'InventoryService'
+Applying dependency management to configuration 'compileProtoPath' in project 'InventoryService'
+Applying dependency management to configuration 'testProtobuf' in project 'InventoryService'
+Applying dependency management to configuration 'testCompileProtoPath' in project 'InventoryService'
+Applying dependency management to configuration 'protobufToolsLocator_protoc' in project 'InventoryService'
+------------------------------------------------------------------------
+Detecting the operating system and CPU architecture
+------------------------------------------------------------------------
+os.detected.name=windows
+os.detected.arch=x86_64
+os.detected.bitness=64
+os.detected.version=10.0
+os.detected.version.major=10
+os.detected.version.minor=0
+os.detected.classifier=windows-x86_64
+Applying dependency management to configuration 'protobufToolsLocator_grpc' in project 'InventoryService'
+All projects evaluated.
+Task path ':InventoryService:build' matched project ':InventoryService'
+Task name matched 'build'
+Selected primary task 'build' from project :InventoryService
+Resolving global dependency management for project 'InventoryService'
+Excluding []
+Excluding []
+Excluding []
+Path for java installation 'C:\Users\azate\.jdks\valhalla-ea-23' (IntelliJ) auto-detected does not contain a java executable
+Path for java installation 'C:\Users\azate\.jdks\openjdk-ea-25' (IntelliJ) auto-detected does not contain a java executable
+Path for java installation 'C:\Users\azate\.jdks\corretto-23.0.2' (IntelliJ) auto-detected does not contain a java executable
+Path for java installation 'C:\Users\azate\.jdks\graalvm-jdk-23.0.2' (IntelliJ) auto-detected does not contain a java executable
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Tasks to be executed: [task ':InventoryService:extractIncludeProto', task ':InventoryService:extractProto', task ':InventoryService:generateProto', task ':InventoryService:compileJava', task ':InventoryService:processResources', task ':InventoryService:classes', task ':InventoryService:resolveMainClassName', task ':InventoryService:bootJar', task ':InventoryService:jar', task ':InventoryService:assemble', task ':InventoryService:extractIncludeTestProto', task ':InventoryService:extractTestProto', task ':InventoryService:generateTestProto', task ':InventoryService:compileTestJava', task ':InventoryService:processTestResources', task ':InventoryService:testClasses', task ':InventoryService:test', task ':InventoryService:check', task ':InventoryService:build']
+Tasks that were excluded: []
+Resolve mutations for :InventoryService:extractIncludeProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:extractIncludeProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:extractIncludeProto UP-TO-DATE
+Caching disabled for task ':InventoryService:extractIncludeProto' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':InventoryService:extractIncludeProto' as it is up-to-date.
+Resolve mutations for :InventoryService:extractProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:extractProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:extractProto UP-TO-DATE
+Caching disabled for task ':InventoryService:extractProto' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':InventoryService:extractProto' as it is up-to-date.
+Resolve mutations for :InventoryService:generateProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:generateProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:generateProto UP-TO-DATE
+Custom actions are attached to task ':InventoryService:generateProto'.
+Caching disabled for task ':InventoryService:generateProto' because:
+  Build cache is disabled
+Skipping task ':InventoryService:generateProto' as it is up-to-date.
+Resolve mutations for :InventoryService:compileJava (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:compileJava (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:compileJava UP-TO-DATE
+Custom actions are attached to task ':InventoryService:compileJava'.
+Caching disabled for task ':InventoryService:compileJava' because:
+  Build cache is disabled
+Skipping task ':InventoryService:compileJava' as it is up-to-date.
+Resolve mutations for :InventoryService:processResources (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:processResources (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:processResources UP-TO-DATE
+Caching disabled for task ':InventoryService:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':InventoryService:processResources' as it is up-to-date.
+Resolve mutations for :InventoryService:classes (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:classes (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:classes UP-TO-DATE
+Skipping task ':InventoryService:classes' as it has no actions.
+Resolve mutations for :InventoryService:resolveMainClassName (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:resolveMainClassName (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:resolveMainClassName UP-TO-DATE
+Caching disabled for task ':InventoryService:resolveMainClassName' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':InventoryService:resolveMainClassName' as it is up-to-date.
+Resolve mutations for :InventoryService:bootJar (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:bootJar (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:bootJar UP-TO-DATE
+Excluding []
+Caching disabled for task ':InventoryService:bootJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':InventoryService:bootJar' as it is up-to-date.
+Resolve mutations for :InventoryService:jar (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:jar (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:jar UP-TO-DATE
+Caching disabled for task ':InventoryService:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':InventoryService:jar' as it is up-to-date.
+Resolve mutations for :InventoryService:assemble (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:assemble (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:assemble UP-TO-DATE
+Skipping task ':InventoryService:assemble' as it has no actions.
+Resolve mutations for :InventoryService:extractIncludeTestProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:extractIncludeTestProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:extractIncludeTestProto UP-TO-DATE
+Caching disabled for task ':InventoryService:extractIncludeTestProto' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':InventoryService:extractIncludeTestProto' as it is up-to-date.
+Resolve mutations for :InventoryService:extractTestProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:extractTestProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:extractTestProto UP-TO-DATE
+Caching disabled for task ':InventoryService:extractTestProto' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':InventoryService:extractTestProto' as it is up-to-date.
+Resolve mutations for :InventoryService:generateTestProto (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:generateTestProto (Thread[#437,Execution worker,5,main]) started.
+
+> Task :InventoryService:generateTestProto NO-SOURCE
+Skipping task ':InventoryService:generateTestProto' as it has no source files and no previous output files.
+Resolve mutations for :InventoryService:compileTestJava (Thread[#437,Execution worker,5,main]) started.
+:InventoryService:compileTestJava (Thread[#437,Execution worker,5,main]) started.
+This JVM does not support getting OS memory, so no OS memory status updates will be broadcast
+
+> Task :InventoryService:compileTestJava FAILED
+Custom actions are attached to task ':InventoryService:compileTestJava'.
+Caching disabled for task ':InventoryService:compileTestJava' because:
+  Build cache is disabled
+Task ':InventoryService:compileTestJava' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':InventoryService:compileTestJava'.
+Compilation mode: default, forking compiler
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Java\jdk-17'.
+file or directory 'C:\Users\azate\IdeaProjects\String\microservice-apps\InventoryService\build\generated\source\proto\test\java', not found
+file or directory 'C:\Users\azate\IdeaProjects\String\microservice-apps\InventoryService\build\generated\source\proto\test\grpc', not found
+Log level has changed, stopping idle worker daemon with out-of-date log level.
+Starting process 'Gradle Worker Daemon 2'. Working directory: C:\Users\azate\.gradle\workers Command: C:\Program Files\Java\jdk-17\bin\java.exe --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED @C:\Users\azate\.gradle\.tmp\gradle-worker-classpath14952785252960744870txt -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=ru -Duser.variant worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Worker Daemon 2'
+Successfully started process 'Gradle Worker Daemon 2'
+Started Gradle worker daemon (0.361 secs) with fork options DaemonForkOptions{executable=C:\Program Files\Java\jdk-17\bin\java.exe, minHeapSize=null, maxHeapSize=null, jvmArgs=[--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED], keepAliveMode=DAEMON}.
+Compiling with JDK Java compiler API.
+
+[Incubating] Problems report is available at: file:///C:/Users/azate/IdeaProjects/String/microservice-apps/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+11 actionable tasks: 1 executed, 10 up-to-date
+Watched directory hierarchies: [C:\Users\azate\IdeaProjects\String\microservice-apps]

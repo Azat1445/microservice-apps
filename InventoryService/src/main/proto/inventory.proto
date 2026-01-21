@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.example.inventoryservice.grpc.generated";
+option java_outer_classname = "InventoryServiceProto";
+
+package inventory;
+
+// Запрос на проверку доступности товара
+message ProductRequest {
+  int64 product_id = 1;
+}
+
+// Ответ с информацией о товаре
+message ProductResponse {
+  int64 id = 1;
+  string name = 2;
+  int64 quantity = 3;
+  double price = 4;
+  int64 sale = 5;
+  double final_price = 6;
+  bool available = 7;
+}
+
+// Запрос на резервирование товара
+message ReserveRequest {
+  int64 product_id = 1;
+  int64 quantity = 2;
+}
+
+// Ответ об успешном резервировании
+message ReserveResponse {
+  int64 product_id = 1;
+  int64 remaining_quantity = 2;
+  bool success = 3;
+  string message = 4;
+}
+
+// gRPC сервис
+service InventoryService {
+  // Проверить доступность товара
+  rpc CheckAvailability(ProductRequest) returns (ProductResponse);
+
+  // Зарезервировать товар
+  rpc ReserveProduct(ReserveRequest) returns (ReserveResponse);
+
+  // Вернуть товар на склад (отмена резервирования)
+  rpc RestoreProduct(ReserveRequest) returns (ReserveResponse);
+}

@@ -1,1 +1,4 @@
 rootProject.name = 'microservice-apps'
+include 'InventoryService'
+include 'OrderService'
+include 'NotificationService'

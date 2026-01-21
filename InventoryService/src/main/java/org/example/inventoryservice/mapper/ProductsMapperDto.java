@@ -1,5 +1,6 @@
 package org.example.inventoryservice.mapper;
 
+import org.example.inventoryservice.dto.ProductsCreateDto;
 import org.example.inventoryservice.dto.ProductsResponseDto;
 import org.example.inventoryservice.dto.ProductsUpdateDto;
 import org.example.inventoryservice.entity.Products;
@@ -16,7 +17,7 @@ public interface ProductsMapperDto {
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
-    Products toEntity(ProductsResponseDto productsResponseDto);
+    Products toEntity(ProductsCreateDto createDto);
 
     // Update DTO -> Entity
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
