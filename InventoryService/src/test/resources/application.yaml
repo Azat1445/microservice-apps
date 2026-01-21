@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: inventory-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory_db
+    username: postgres
+    password: xoxymesddd
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    liquibase:
+      change-log: classpath:db/changelog/db.changelog-master.yaml
+      enabled: true
+
+# gRPC configuration
+grpc:
+  server:
+    port: 9090
+    enable-keep-alive: true
+
+server:
+  port: 8082
+
+logging:
+  level:
+    org.example.inventoryservice: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

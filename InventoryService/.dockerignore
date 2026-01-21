@@ -1,0 +1,45 @@
+# Build artifacts
+build/
+target/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Test files
+src/test/
+**/test/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Temporary files
+*.tmp
+*.swp
+*~
