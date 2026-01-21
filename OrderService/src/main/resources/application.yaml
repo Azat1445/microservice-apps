@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: order-service
+
+  # PostgreSQL Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_db
+    username: postgres
+    password: xoxymesddd
+    driver-class-name: org.postgresql.Driver
+
+  # JPA / Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # Liquibase
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+
+  # Kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+
+#  Kafka
+kafka:
+  topic:
+    orders: orders-topic
+
+# gRPC Client
+grpc:
+  client:
+    inventory-service:
+      address: static://localhost:9090
+      negotiationType: plaintext
+
+# JWT Configuration
+jwt:
+  secret: 7134743777217A25432A462D4A614E645267556B58703273357638792F423F45
+  expiration: 3600000
+  refresh-expiration: 86400000
+
+# Server
+server:
+  port: 8081
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+# Logging
+logging:
+  level:
+    root: INFO
+    org.example.orderservice: DEBUG
+    org.springframework.security: DEBUG
