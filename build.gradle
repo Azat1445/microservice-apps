@@ -1,0 +1,4 @@
+// Root build script for Gradle multiproject (monorepo)
+// Subprojects are configured in their own build.gradle
+
+subprojects { }
