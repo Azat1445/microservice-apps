@@ -1,0 +1,68 @@
+spring:
+  application:
+    name: notification-service
+
+  # PostgreSQL Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification_db
+    username: postgres
+    password: xoxymesddd
+    driver-class-name: org.postgresql.Driver
+
+  # JPA / Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # Liquibase
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+    default-schema: public
+
+    jpa:
+      defer-datasource-initialization: false
+
+  # Kafka Consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+        spring.json.type.mapping: orderEvent:org.example.notificationservice.dto.OrderEventDTO
+
+# Kafka Topic
+kafka:
+  topic:
+    orders: orders-topic
+
+# Server
+server:
+  port: 8083
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+# Logging
+logging:
+  level:
+    root: INFO
+    org.example.notificationservice: DEBUG
+    org.springframework.kafka: INFO
+    org.hibernate.SQL: DEBUG
+    liquibase: DEBUG
+    liquibase.executor: DEBUG
+#    liquibase.changelog: DEBUG

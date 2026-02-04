@@ -4,10 +4,6 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
-/**
- * This is the dto for API responses
- */
-
 @Data
 public class ProductsResponseDto {
 
